@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 영통회 계정확인 및 시간 조회 </title>
+    <title>계정명 시간 조회</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,23 +54,23 @@
 <body>
 
     <div class="container">
-        <h1> 2. 영통회 계정확인 및 시간 조회 </h1>
-        <label for="phone_last_digit">인스타 계정을 입력하세요:</label>
-        <input type="text" id="phone_last_digit" placeholder="인스타 계정을 입력하세요">
-        <button onclick="fetchTrackingNumber()">조회</button><br>
+        <h1>계정명으로 시간 조회</h1>
+        <label for="account_name">계정명을 입력하세요:</label>
+        <input type="text" id="account_name" placeholder="계정명을 입력하세요">
+        <button onclick="fetchAccountTime()">조회</button>
         
         <div class="result" id="result"></div>
     </div>
 
     <script>
         // 구글 시트의 CSV URL
-        const googleSheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtSFl0GtuOF3prejuw9SEAfrJtLwRaGBm85RMevU-qwTAiM1I_3VrPtZlAiedOBDcWlltu8q9D27ZV/pub?gid=843718176&single=true&output=csv';
+        const googleSheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTKp-6lh5i0hvbSIEPq4IPHj-SBZAIqDOS8ONxBAS6Kl5drYZgXcLwehrblDRYr_ALXSu3E6-n-QqEu/pub?gid=0&single=true&output=csv;
 
         // Google Sheets에서 데이터를 가져오는 함수
-        function fetchTrackingNumber() {
-            const phoneLastDigit = document.getElementById('phone_last_digit').value.trim();
-            if (!phoneLastDigit) {
-                alert("인스타 계정을 입력하세요.");
+        function fetchAccountTime() {
+            const accountName = document.getElementById('account_name').value.trim();
+            if (!accountName) {
+                alert("계정명을 입력하세요.");
                 return;
             }
 
@@ -79,9 +79,11 @@
                 .then(response => response.text())
                 .then(csvText => {
                     const data = csvToArray(csvText);
-                    const result = getTrackingNumberFromData(data, phoneLastDigit);
-                    document.getElementById('result').textContent = result ? `시간: ${result}` : "찾을 수 없습니다.";
-                })  
+                    const result = getTimeFromData(data, accountName);
+                    document.getElementById('result').textContent = result 
+                        ? `시간: ${result}` 
+                        : "해당 계정명에 대한 시간을 찾을 수 없습니다.";
+                })
                 .catch(error => {
                     console.error("Error fetching data: ", error);
                     alert("데이터를 가져오는 중에 오류가 발생했습니다.");
@@ -90,29 +92,31 @@
 
         // CSV 데이터를 배열로 변환하는 함수
         function csvToArray(csvText) {
-            const rows = csvText.split("\n");
-            const headers = rows[0].split(",");  // 첫 번째 행이 헤더
+            const rows = csvText.trim().split("\n"); // 공백 제거 및 행 분리
+            const headers = rows[0].split(","); // 헤더 추출
             const data = rows.slice(1).map(row => {
                 const values = row.split(",");
-                let obj = {};
+                const obj = {};
                 headers.forEach((header, index) => {
-                    obj[header.trim()] = values[index].trim();
+                    obj[header.trim()] = values[index]?.trim() || ""; // 빈 데이터 처리
                 });
                 return obj;
             });
-            return data;
+            return data.filter(row => Object.keys(row).length > 0); // 빈 행 제거
         }
 
-        function getTrackingNumberFromData(data, phoneLastDigit) {
-            for (let row of data) {
-                const phoneNumber = row['계정명']; 
-                    return row['시간']; 
+        // 계정명을 기준으로 시간을 찾는 함수
+        function getTimeFromData(data, accountName) {
+            for (const row of data) {
+                if (row['계정명']?.trim() === accountName) {
+                    return row['시간']?.trim() || null; // 시간 반환
                 }
             }
-            return null;  // 일치하는 송장번호가 없을 경우 null 반환
+            return null; // 일치하는 계정명이 없을 경우 null 반환
         }
-        
     </script>
- <br><br><br> <center> 지속적인 오류 발생 시 문의: sandsenter785@gmail.com </center> 
+
+    <br><br><br> 
+    <center> 지속적인 오류 발생 시 문의: sandsenter785@gmail.com </center>
 </body>
 </html>
