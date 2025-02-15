@@ -3,120 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>샌즈_임시페이지</title>
+    <title> LEE JAE WON </title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
             margin: 0;
-            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #FFFAFA;
+            color: #5A3E2B;
+            text-align: center;
+            overflow-x: hidden;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
         }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        label, input, button {
-            width: 90%;
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        input {
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #f46602;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #CE723D;
-        }
-        .result {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 18px;
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-color: #fa6602;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: white;
+            margin-bottom: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro {
+            max-width: 600px;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .scroll-image {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            transition: width 0.5s ease, height 0.5s ease;
         }
     </style>
 </head>
 <body>
-<!--
     <div class="container">
-        <h1>송장번호 조회</h1>
-        <label for="phone_last_digit">전화번호 뒷자리를 입력하세요:</label>
-        <input type="text" id="phone_last_digit" placeholder="전화번호 뒷자리를 입력하세요">
-        <button onclick="fetchTrackingNumber()">조회</button><br>
-        <laber> 택배사는 CJ대한통운 입니다. </label>
-        
-        <div class="result" id="result"></div>
+<!--        <div class="logo">LOGO</div>   -->
+        <div class="intro">
+             <H3>"Together Again: 2025, Our Story"</H3>
+            <pre>
+            어느덧 데뷔 29년을 맞이한 지금, 저는 여전히 여러분과 함께 걸어가고 있습니다. 많은 시간이 흘렀지만, 
+            그 시간이 저를 여기까지 오게 만든 원동력은 오직 팬 여러분의 사랑과 믿음이 있었기에 가능했습니다.
+            이번 2025 년 프로젝트는 그동안의 여정과 앞으로의 꿈을 여러분과 함께 나누고 싶어서 준비한 특별한 이벤트 입니다.
+            언제나 그랬듯 2025, Our Story 앨범은 그 어떤 때보다도 더 욕심을 내어 완성도 있는 앨범을 만드려고 합니다. 
+            그리고 무엇보다 팬 여러분과의 소통을 더욱 강화하고, 함께 앨범을 만들어가는 과정을 공유하며 더 큰 의미를 만들고 싶습니다.
+            이번 프로젝트를 통해, 여러분이 주신 사랑에 대한 진심을 음악으로 표현하고 싶습니다. 
+            우리는 오랜 시간 함께 했고, 앞으로도 계속 함께할 거예요. 음악을 만들며, 여러분과 소통하고, 
+            그 사랑을 되돌려주는 시간이 될 거라 믿습니다.
+            2025년 발매될 앨범은 저만의 작품이 아니라, 여러분과 함께 만들어가는 앨범입니다.
+            이번 프로젝트에 참여해주시면, 팬 여러분 한 분 한 분의 목소리와 사랑이 이 앨범에 그대로 담길 거예요. 
+            제 음악을 사랑해주시고 지지해주신 여러분에게 감사의 마음을 전하며, 
+            이번 프로젝트가 여러분과 저의 특별한 기억으로 남을 수 있도록 함께 해주세요.
+            여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.
+            함께 해요, "Together Again: 2025, Our Story".
+            
+            이 프로젝트 제목과 멘트는 신뢰를 기반으로 한 팬들과의 지속적인 소통과 애정을 강조하며, 
+            아티스트의 의지와 헌신을 잘 표현해주고 있어요. 팬들이 이 프로젝트에 참여하고, 
+            아티스트와 함께 앨범을 만드는 경험을 할 수 있다는 점을 강조하는 데 중점을 두었습니다.
+
+
+                
+            </pre>
+        </div>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200" alt="이미지1">
+            <img src="https://via.placeholder.com/200" alt="이미지2">
+            <img src="https://via.placeholder.com/200" alt="이미지3">
+            <img src="https://via.placeholder.com/200" alt="이미지4">
+        </div>
     </div>
-
+    <img class="scroll-image" src="https://via.placeholder.com/320x180" alt="스크롤 이미지">
     <script>
-        // 구글 시트의 CSV URL
-        const googleSheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtSFl0GtuOF3prejuw9SEAfrJtLwRaGBm85RMevU-qwTAiM1I_3VrPtZlAiedOBDcWlltu8q9D27ZV/pub?gid=843718176&single=true&output=csv';
+        const scrollImage = document.querySelector('.scroll-image');
+        let lastScrollY = window.scrollY;
 
-        // Google Sheets에서 데이터를 가져오는 함수
-        function fetchTrackingNumber() {
-            const phoneLastDigit = document.getElementById('phone_last_digit').value.trim();
-            if (!phoneLastDigit) {
-                alert("전화번호 뒷자리를 입력하세요.");
-                return;
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.scrollY;
+            let newSize = Math.min(320 + scrollTop, window.innerWidth);
+
+            if (newSize >= window.innerWidth) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
             }
 
-            // CSV 데이터를 fetch로 가져오기
-            fetch(googleSheetUrl)
-                .then(response => response.text())
-                .then(csvText => {
-                    const data = csvToArray(csvText);
-                    const result = getTrackingNumberFromData(data, phoneLastDigit);
-                    document.getElementById('result').textContent = result ? `송장번호: ${result}` : "해당하는 송장번호를 찾을 수 없습니다.";
-                })  
-                .catch(error => {
-                    console.error("Error fetching data: ", error);
-                    alert("데이터를 가져오는 중에 오류가 발생했습니다.");
-                });
-        }
+            scrollImage.style.width = `${newSize}px`;
+            scrollImage.style.height = 'auto';
 
-        // CSV 데이터를 배열로 변환하는 함수
-        function csvToArray(csvText) {
-            const rows = csvText.split("\n");
-            const headers = rows[0].split(",");  // 첫 번째 행이 헤더
-            const data = rows.slice(1).map(row => {
-                const values = row.split(",");
-                let obj = {};
-                headers.forEach((header, index) => {
-                    obj[header.trim()] = values[index].trim();
-                });
-                return obj;
-            });
-            return data;
-        }
-
-        // 전화번호 뒷자리를 기준으로 송장번호 찾기
-        function getTrackingNumberFromData(data, phoneLastDigit) {
-            for (let row of data) {
-                const phoneNumber = row['전화번호'].replace(/-/g, '');  // 전화번호에서 하이픈 제거
-                if (phoneNumber.slice(-4) === phoneLastDigit) {
-                    return row['송장번호'];  // 송장번호 반환
-                }
+            if (scrollTop === 0) {
+                scrollImage.style.width = '320px';
             }
-            return null;  // 일치하는 송장번호가 없을 경우 null 반환
-        }
-        
+        });
     </script>
- <br><br><br> <center> 지속적인 오류 발생 시 문의: sandsenter785@gmail.com </center> 
-    -->
 </body>
 </html>
