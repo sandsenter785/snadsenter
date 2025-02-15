@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #FFFAFA;
+            background-color: #D5D5D5;
             color: #5A3E2B;
             text-align: center;
             overflow-x: hidden;
@@ -28,14 +28,44 @@
             margin-bottom: 40px;
             font-weight: 500;
         }
-        .scroll-image {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 256px;
-            transition: width 0.3s ease, height 0.3s ease;
-            display: block;
+        .funding-section {
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .funding {
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-weight: 500;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: transparent;
+            text-align: left;
+            position: relative;
+        }
+        .funding h4 {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: -20px -20px 10px -20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .funding p {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        .funding .price {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -65,64 +95,42 @@
             여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.
             함께 해요, "Together Again: 2025, Our Story".</p>
         </div>
-        <div style="height: 200px;"></div> <!-- 추가된 공백 -->
-    </div>
-  
 
-    <script>
-    function wheel(e, img) 
-    { 
-      if(e.wheelDelta > 0) 
-      {
-         if( img.width >= 280 )
-         {
-           img.width -= img.width*0.05; 
-           img.height -= img.height*0.05;
-         }
-      }
-      else 
-      { 
-         img.width += img.width*0.05; 
-         img.height += img.height*0.05;
-      }
-    }
-    </script>  
-    <img  onwheel="wheel(event, this)" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" width="280" height="373" alt="img">
-
-<!--
-    <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
-  
-    <script>
-        const scrollImage = document.querySelector('.scroll-image');
-        const intro = document.querySelector('.intro');
-        const bufferSpace = 200; // 추가된 공백 만큼
+        <div class="funding-section">
+            <h3>펀딩 기간</h3>
+            <p>2025.02.14 ~ 2025.02.28</p> <p>
+            <h3>펀딩 패키지</h3>
         
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.scrollY;
-            let introBottom = intro.getBoundingClientRect().bottom + window.scrollY;
-            let newSize = Math.min(256 + scrollTop / 2, window.innerWidth);
-
-            if (newSize >= window.innerWidth) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
-            }
-
-            scrollImage.style.width = `${newSize}px`;
-            scrollImage.style.height = 'auto';
-
-            if (scrollTop === 0) {
-                scrollImage.style.width = '256px';
-            }
-
-            if (scrollTop > introBottom + bufferSpace) {
-                scrollImage.style.display = 'block';
-            } else {
-                scrollImage.style.display = 'none';
-            }
-        });
-    </script>
--->
-  
+            <div class="funding">
+                <h4>BASIC PACK</h4>
+                <p>-인증 카드</p>
+                <p>-음원 USB</p>
+                <p>-앨범 CD 1ea</p>
+                <span class="price">₩50,000</span>
+            </div>
+            <div class="funding">          
+                <h4>VIP PACK</h4>
+                <p>-인증 카드</p>
+                <p>-음원 USB</p>
+                <p>-앨범 CD 1ea (크레딧에 후원자명)</p>
+                <p>-4월 1st MINI album Event</p>
+                <p>-2st MINI album 굿즈</p>
+                <span class="price">₩180,000</span>
+            </div>
+            <div class="funding">          
+                <h4>VVIP PACK</h4>
+                <p>-인증 카드</p>
+                <p>-음원 USB</p>
+                <p>-앨범 CD 2ea (크레딧에 후원자명)</p>
+                <p>-MV (크레딧에 후원자명)</p>
+                <p>-4월 1st MINI album Event</p>
+                <p>-9월 2st MINI album Event</p>
+                <p>-방청 및 행사 우선순위</p>
+                <p>-개인활동 및 그룹공연 시 선예매</p>
+                <p>-굿즈 패키지</p>
+                <span class="price">₩500,000</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
