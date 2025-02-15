@@ -35,7 +35,7 @@
         }
         .intro {
             max-width: 600px;
-            font-size: 20px;
+            font-size: 5px;
             line-height: 1.8;
             margin-bottom: 40px;
             font-weight: 500;
@@ -58,11 +58,12 @@
             transform: scale(1.05);
         }
         .scroll-image {
+            display: none;
             position: fixed;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 320px;
+            width: 256px;
             transition: width 0.5s ease, height 0.5s ease;
         }
     </style>
@@ -70,9 +71,10 @@
 <body>
     <div class="container">
 <!--        <div class="logo">LOGO</div>   -->
-        <div class="intro">
-             <H4>"Together Again: 2025, Our Story"</H4>
-            <font size = 7>
+
+        <H4>"Together Again: 2025, Our Story"</H4>
+      
+        <div class="intro">            
             어느덧 데뷔 29년을 맞이한 지금, 저는 여전히 여러분과 함께 걸어가고 있습니다. 
             많은 시간이 흘렀지만, 그 시간이 저를 여기까지 오게 만든 원동력은 
             오직 팬 여러분의 사랑과 믿음이 있었기에 가능했습니다.
@@ -101,37 +103,37 @@
             이 프로젝트 제목과 멘트는 신뢰를 기반으로 한 팬들과의 지속적인 소통과 애정을 강조하며, 
             아티스트의 의지와 헌신을 잘 표현해주고 있어요. 팬들이 이 프로젝트에 참여하고, 
             아티스트와 함께 앨범을 만드는 경험을 할 수 있다는 점을 강조하는 데 중점을 두었습니다.
-            </font>
+        
             
             <p><p><p><p><p><p><p><p><p>
         </div>
-<!--        <div class="gallery">
-            <img src="https://via.placeholder.com/200" alt="이미지1">
-            <img src="https://via.placeholder.com/200" alt="이미지2">
-            <img src="https://via.placeholder.com/200" alt="이미지3">
-            <img src="https://via.placeholder.com/200" alt="이미지4">
-        </div>    -->
     </div>
     <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
     <script>
         const scrollImage = document.querySelector('.scroll-image');
-        let lastScrollY = window.scrollY;
-
+        const intro = document.querySelector('.intro');
+        
         window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
             let newSize = Math.min(320 + scrollTop, window.innerWidth);
-
+            
             if (newSize >= window.innerWidth) {
                 document.body.style.overflow = 'hidden';
             } else {
                 document.body.style.overflow = 'auto';
             }
-
+            
             scrollImage.style.width = `${newSize}px`;
             scrollImage.style.height = 'auto';
-
+            
             if (scrollTop === 0) {
-                scrollImage.style.width = '320px';
+                scrollImage.style.width = '256px';
+            }
+
+            if (window.scrollY > intro.offsetHeight) {
+                scrollImage.style.display = 'block';
+            } else {
+                scrollImage.style.display = 'none';
             }
         });
     </script>
