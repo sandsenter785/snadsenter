@@ -35,7 +35,7 @@
             transform: translateX(-50%);
             width: 256px;
             transition: width 0.3s ease, height 0.3s ease;
-            display: none;
+            display: block;
         }
     </style>
 </head>
@@ -65,18 +65,18 @@
             여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.
             함께 해요, "Together Again: 2025, Our Story".</p>
         </div>
-        <div style="height: 180px;"></div> <!-- 추가된 공백 -->
+        <div style="height: 200px;"></div> <!-- 추가된 공백 -->
     </div>
     <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
     <script>
         const scrollImage = document.querySelector('.scroll-image');
         const intro = document.querySelector('.intro');
-        const bufferSpace = 180; // 추가된 공백 만큼
+        const bufferSpace = 200; // 추가된 공백 만큼
         
         window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
-            let introBottom = intro.offsetTop + intro.offsetHeight;
-            let newSize = Math.min(256 + scrollTop, window.innerWidth);
+            let introBottom = intro.getBoundingClientRect().bottom + window.scrollY;
+            let newSize = Math.min(256 + scrollTop / 2, window.innerWidth);
 
             if (newSize >= window.innerWidth) {
                 document.body.style.overflow = 'hidden';
