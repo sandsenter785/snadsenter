@@ -103,14 +103,15 @@
         
         window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
+            let introBottom = intro.offsetTop + intro.offsetHeight;
             
-            if (window.scrollY > intro.offsetTop + intro.offsetHeight) {
+            if (scrollTop > introBottom) {
                 scrollImage.style.display = 'block';
                 scrollImage.style.opacity = '1';
             } else {
                 scrollImage.style.opacity = '0';
                 setTimeout(() => {
-                    if (window.scrollY <= intro.offsetTop + intro.offsetHeight) {
+                    if (window.scrollY <= introBottom) {
                         scrollImage.style.display = 'none';
                     }
                 }, 500);
