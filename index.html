@@ -35,6 +35,7 @@
             transform: translateX(-50%);
             width: 256px;
             transition: width 0.3s ease, height 0.3s ease;
+            display: none;
         }
     </style>
 </head>
@@ -64,21 +65,23 @@
             여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.
             함께 해요, "Together Again: 2025, Our Story".</p>
         </div>
+        <div style="height: 180px;"></div> <!-- 추가된 공백 -->
     </div>
     <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
     <script>
         const scrollImage = document.querySelector('.scroll-image');
-        const body = document.body;
-        let lastScrollY = window.scrollY;
-
+        const intro = document.querySelector('.intro');
+        const bufferSpace = 180; // 추가된 공백 만큼
+        
         window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
+            let introBottom = intro.offsetTop + intro.offsetHeight;
             let newSize = Math.min(256 + scrollTop, window.innerWidth);
 
             if (newSize >= window.innerWidth) {
-                body.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
             } else {
-                body.style.overflow = 'auto';
+                document.body.style.overflow = 'auto';
             }
 
             scrollImage.style.width = `${newSize}px`;
@@ -86,6 +89,12 @@
 
             if (scrollTop === 0) {
                 scrollImage.style.width = '256px';
+            }
+
+            if (scrollTop > introBottom + bufferSpace) {
+                scrollImage.style.display = 'block';
+            } else {
+                scrollImage.style.display = 'none';
             }
         });
     </script>
