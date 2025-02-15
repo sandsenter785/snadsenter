@@ -67,7 +67,33 @@
         </div>
         <div style="height: 200px;"></div> <!-- 추가된 공백 -->
     </div>
+  
+
+    <script>
+    function wheel(e, img) 
+    { 
+      if(e.wheelDelta > 0) 
+      {
+         if( img.width >= 280 )
+         {
+           img.width -= img.width*0.05; 
+           img.height -= img.height*0.05;
+         }
+      }
+      else 
+      { 
+         img.width += img.width*0.05; 
+         img.height += img.height*0.05;
+      }
+    }
+    </script>
+
+  
+    <img  onwheel="wheel(event, this)" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" width="280" height="373" alt="img">
+
+<!--
     <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
+  
     <script>
         const scrollImage = document.querySelector('.scroll-image');
         const intro = document.querySelector('.intro');
@@ -98,5 +124,7 @@
             }
         });
     </script>
+-->
+  
 </body>
 </html>
