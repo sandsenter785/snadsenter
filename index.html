@@ -12,26 +12,14 @@
             color: #5A3E2B;
             text-align: center;
             overflow-x: hidden;
+            overflow-y: auto;
+            transition: overflow 0.5s ease;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 50px 20px;
-        }
-        .logo {
-            width: 120px;
-            height: 120px;
-            background-color: #fa6602;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 30px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         .intro {
             max-width: 600px;
@@ -40,38 +28,19 @@
             margin-bottom: 40px;
             font-weight: 500;
         }
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 1000px;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 15px;
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
         .scroll-image {
-            display: none;
             position: fixed;
-            bottom: 20px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             width: 256px;
-            transition: opacity 0.5s ease;
+            transition: width 0.3s ease, height 0.3s ease;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h3>"Together Again: 2025, Our Story"</h3>
-      
         <div class="intro">            
             <p>어느덧 데뷔 29년을 맞이한 지금, 저는 여전히 여러분과 함께 걸어가고 있습니다. 
             많은 시간이 흘렀지만, 그 시간이 저를 여기까지 오게 만든 원동력은 
@@ -99,22 +68,24 @@
     <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">
     <script>
         const scrollImage = document.querySelector('.scroll-image');
-        const intro = document.querySelector('.intro');
-        
+        const body = document.body;
+        let lastScrollY = window.scrollY;
+
         window.addEventListener('scroll', () => {
             let scrollTop = window.scrollY;
-            let introBottom = intro.offsetTop + intro.offsetHeight;
-            
-            if (scrollTop > introBottom) {
-                scrollImage.style.display = 'block';
-                scrollImage.style.opacity = '1';
+            let newSize = Math.min(256 + scrollTop, window.innerWidth);
+
+            if (newSize >= window.innerWidth) {
+                body.style.overflow = 'hidden';
             } else {
-                scrollImage.style.opacity = '0';
-                setTimeout(() => {
-                    if (window.scrollY <= introBottom) {
-                        scrollImage.style.display = 'none';
-                    }
-                }, 500);
+                body.style.overflow = 'auto';
+            }
+
+            scrollImage.style.width = `${newSize}px`;
+            scrollImage.style.height = 'auto';
+
+            if (scrollTop === 0) {
+                scrollImage.style.width = '256px';
             }
         });
     </script>
