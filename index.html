@@ -77,6 +77,412 @@
             padding: 10px;
             background: transparent;
         }
+
+
+        .card-grid-pricing,
+        .card-grid-pricing * {
+          box-sizing: border-box;
+        }
+        .card-grid-pricing {
+          background: var(--var-sds-color-background-default-default, #ffffff);
+          padding: var(--var-sds-size-space-1600, 64px);
+          display: flex;
+          flex-direction: column;
+          gap: var(--var-sds-size-space-1200, 48px);
+          align-items: center;
+          justify-content: flex-start;
+          height: 699px;
+          position: relative;
+        }
+        .card-grid {
+          display: flex;
+          flex-direction: row;
+          gap: var(--var-sds-size-space-1600, 64px);
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+        }
+        .pricing-card {
+          background: var(--var-sds-color-background-default-default, #ffffff);
+          border-radius: var(--var-sds-size-radius-200, 8px);
+          border-style: solid;
+          border-color: var(--var-sds-color-border-default-default, #d9d9d9);
+          border-width: 1px;
+          padding: var(--var-sds-size-space-800, 32px);
+          display: flex;
+          flex-direction: column;
+          gap: var(--var-sds-size-space-600, 24px);
+          align-items: center;
+          justify-content: flex-start;
+          flex: 1;
+          min-width: 300px;
+          position: relative;
+          overflow: hidden;
+        }
+        .top {
+          display: flex;
+          flex-direction: column;
+          gap: var(--var-sds-size-space-400, 16px);
+          align-items: center;
+          justify-content: flex-end;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+        }
+        .text-heading {
+          display: flex;
+          flex-direction: row;
+          gap: 0px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-shrink: 0;
+          width: 149px;
+          height: 29px;
+          position: relative;
+        }
+        .text-heading2 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: center;
+          font-family: var(--heading-font-family, "Inter-SemiBold", sans-serif);
+          font-size: var(--heading-font-size, 24px);
+          line-height: var(--heading-line-height, 120%);
+          letter-spacing: var(--heading-letter-spacing, -0.02em);
+          font-weight: var(--heading-font-weight, 600);
+          position: relative;
+          flex: 1;
+        }
+        .text-price {
+          display: flex;
+          flex-direction: row;
+          gap: 0px;
+          align-items: flex-end;
+          justify-content: flex-end;
+          flex-shrink: 0;
+          position: relative;
+        }
+        .price {
+          display: flex;
+          flex-direction: row;
+          gap: 0px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-shrink: 0;
+          position: relative;
+        }
+        ._50 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-heading-font-family,
+            "Inter-SemiBold",
+            sans-serif
+          );
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          font-weight: var(--var-sds-typography-heading-font-weight, 600);
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+        }
+        .text-list {
+          display: flex;
+          flex-direction: column;
+          gap: var(--var-sds-size-space-300, 12px);
+          align-items: flex-start;
+          justify-content: flex-start;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+        }
+        .text-list-item {
+          flex-shrink: 0;
+          width: 89px;
+          height: 22px;
+          position: relative;
+        }
+        .list-item {
+          color: var(--var-sds-color-text-default-secondary, #757575);
+          text-align: left;
+          font-family: var(--body-base-font-family, "Inter-Regular", sans-serif);
+          font-size: var(--body-base-font-size, 16px);
+          line-height: var(--body-base-line-height, 140%);
+          font-weight: var(--body-base-font-weight, 400);
+          position: absolute;
+          right: 20.22%;
+          left: 0%;
+          width: 79.78%;
+          bottom: 0%;
+          top: 0%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .list-item2 {
+          color: var(--var-sds-color-text-default-secondary, #757575);
+          text-align: left;
+          font-family: var(--body-base-font-family, "Inter-Regular", sans-serif);
+          font-size: var(--body-base-font-size, 16px);
+          line-height: var(--body-base-line-height, 140%);
+          font-weight: var(--body-base-font-weight, 400);
+          position: absolute;
+          right: 16.85%;
+          left: 0%;
+          width: 83.15%;
+          bottom: 0%;
+          top: 0%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .list-item3 {
+          color: var(--var-sds-color-text-default-secondary, #757575);
+          text-align: left;
+          font-family: var(--body-base-font-family, "Inter-Regular", sans-serif);
+          font-size: var(--body-base-font-size, 16px);
+          line-height: var(--body-base-line-height, 140%);
+          font-weight: var(--body-base-font-weight, 400);
+          position: absolute;
+          right: -6.74%;
+          left: 0%;
+          width: 106.74%;
+          bottom: 0%;
+          top: 0%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .pricing-card2 {
+          background: var(--var-sds-color-background-brand-default, #2c2c2c);
+          border-radius: var(--var-sds-size-radius-200, 8px);
+          border-style: solid;
+          border-color: var(--var-sds-color-border-brand-default, #2c2c2c);
+          border-width: 1px;
+          padding: var(--var-sds-size-space-800, 32px);
+          display: flex;
+          flex-direction: column;
+          gap: var(--var-sds-size-space-600, 24px);
+          align-items: center;
+          justify-content: flex-start;
+          flex: 1;
+          min-width: 300px;
+          position: relative;
+          overflow: hidden;
+        }
+        .text-heading3 {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: center;
+          font-family: var(--heading-font-family, "Inter-SemiBold", sans-serif);
+          font-size: var(--heading-font-size, 24px);
+          line-height: var(--heading-line-height, 120%);
+          letter-spacing: var(--heading-letter-spacing, -0.02em);
+          font-weight: var(--heading-font-weight, 600);
+          position: relative;
+          flex: 1;
+        }
+        .text-price2 {
+          display: flex;
+          flex-direction: row;
+          gap: 0px;
+          align-items: flex-end;
+          justify-content: center;
+          flex-shrink: 0;
+          position: relative;
+        }
+        .div {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-title-page-font-family,
+            "Inter-Bold",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-subtitle-size-small, 24px);
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          font-weight: var(--var-sds-typography-title-page-font-weight, 700);
+          position: relative;
+        }
+        ._502 {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-title-page-font-family,
+            "Inter-Bold",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-title-page-size-base, 48px);
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          font-weight: var(--var-sds-typography-title-page-font-weight, 700);
+          position: relative;
+        }
+        .mo {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-body-font-family,
+            "Inter-Regular",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-body-size-small, 14px);
+          line-height: 180%;
+          font-weight: var(--var-sds-typography-body-font-weight-regular, 400);
+          position: relative;
+        }
+        .list-item4 {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: left;
+          font-family: var(--body-base-font-family, "Inter-Regular", sans-serif);
+          font-size: var(--body-base-font-size, 16px);
+          line-height: var(--body-base-line-height, 140%);
+          font-weight: var(--body-base-font-weight, 400);
+          position: absolute;
+          right: 0%;
+          left: 0%;
+          width: 100%;
+          bottom: 0%;
+          top: 0%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .button {
+          background: var(--var-sds-color-background-neutral-tertiary, #e3e3e3);
+          border-radius: var(--var-sds-size-radius-200, 8px);
+          border-style: solid;
+          border-color: var(--var-sds-color-border-neutral-secondary, #767676);
+          border-width: 1px;
+          padding: var(--var-sds-size-space-300, 12px);
+          display: flex;
+          flex-direction: row;
+          gap: var(--var-sds-size-space-200, 8px);
+          align-items: center;
+          justify-content: center;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+          overflow: hidden;
+        }
+        .button2 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: left;
+          font-family: var(
+            --single-line-body-base-font-family,
+            "Inter-Regular",
+            sans-serif
+          );
+          font-size: var(--single-line-body-base-font-size, 16px);
+          line-height: var(--single-line-body-base-line-height, 100%);
+          font-weight: var(--single-line-body-base-font-weight, 400);
+          position: relative;
+        }
+        .div2 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-title-page-font-family,
+            "Inter-Bold",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-subtitle-size-small, 24px);
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          font-weight: var(--var-sds-typography-title-page-font-weight, 700);
+          position: relative;
+        }
+        ._503 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-title-page-font-family,
+            "Inter-Bold",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-title-page-size-base, 48px);
+          line-height: 100%;
+          letter-spacing: -0.02em;
+          font-weight: var(--var-sds-typography-title-page-font-weight, 700);
+          position: relative;
+        }
+        .mo2 {
+          color: var(--var-sds-color-text-default-default, #1e1e1e);
+          text-align: left;
+          font-family: var(
+            --var-sds-typography-body-font-family,
+            "Inter-Regular",
+            sans-serif
+          );
+          font-size: var(--var-sds-typography-body-size-small, 14px);
+          line-height: 180%;
+          font-weight: var(--var-sds-typography-body-font-weight-regular, 400);
+          position: relative;
+        }
+        .list-item5 {
+          color: var(--var-sds-color-text-default-secondary, #757575);
+          text-align: left;
+          font-family: var(--body-base-font-family, "Inter-Regular", sans-serif);
+          font-size: var(--body-base-font-size, 16px);
+          line-height: var(--body-base-line-height, 140%);
+          font-weight: var(--body-base-font-weight, 400);
+          position: absolute;
+          right: 0%;
+          left: 0%;
+          width: 100%;
+          bottom: 0%;
+          top: 0%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .button3 {
+          background: var(--var-sds-color-background-brand-default, #2c2c2c);
+          border-radius: var(--var-sds-size-radius-200, 8px);
+          border-style: solid;
+          border-color: var(--var-sds-color-border-brand-default, #2c2c2c);
+          border-width: 1px;
+          padding: var(--var-sds-size-space-300, 12px);
+          display: flex;
+          flex-direction: row;
+          gap: var(--var-sds-size-space-200, 8px);
+          align-items: center;
+          justify-content: center;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+          overflow: hidden;
+        }
+        .button4 {
+          color: var(--var-sds-color-text-brand-on-brand, #f5f5f5);
+          text-align: left;
+          font-family: var(
+            --single-line-body-base-font-family,
+            "Inter-Regular",
+            sans-serif
+          );
+          font-size: var(--single-line-body-base-font-size, 16px);
+          line-height: var(--single-line-body-base-line-height, 100%);
+          font-weight: var(--single-line-body-base-font-weight, 400);
+          position: relative;
+        }
+
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
@@ -141,6 +547,144 @@
                 <span class="price">₩500,000</span>
             </div>
 
+
+<div class="card-grid-pricing">
+  <div class="card-grid">
+    <div class="pricing-card">
+      <div class="top">
+        <div class="text-heading">
+          <div class="text-heading2">BASIC PACK</div>
+        </div>
+        <div class="text-price">
+          <div class="price">
+            <div class="_50">₩50,000</div>
+          </div>
+        </div>
+        <div class="text-list">
+          <div class="text-list-item">
+            <div class="list-item">-인증 카드</div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item2">-음원 USB</div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item3">-앨범 CD 1ea</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-card2">
+      <div class="top">
+        <div class="text-heading">
+          <div class="text-heading3">Title</div>
+        </div>
+        <div class="text-price2">
+          <div class="price">
+            <div class="div">$</div>
+            <div class="_502">50</div>
+          </div>
+          <div class="mo">/ mo</div>
+        </div>
+        <div class="text-list">
+          <div class="text-list-item">
+            <div class="list-item4">
+              <ul class="list-item-4-span">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item4">
+              <ul class="list-item-4-span2">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item4">
+              <ul class="list-item-4-span3">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item4">
+              <ul class="list-item-4-span4">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item4">
+              <ul class="list-item-4-span5">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <div class="button2">Button</div>
+      </div>
+    </div>
+    <div class="pricing-card">
+      <div class="top">
+        <div class="text-heading">
+          <div class="text-heading2">Title</div>
+        </div>
+        <div class="text-price2">
+          <div class="price">
+            <div class="div2">$</div>
+            <div class="_503">50</div>
+          </div>
+          <div class="mo2">/ mo</div>
+        </div>
+        <div class="text-list">
+          <div class="text-list-item">
+            <div class="list-item5">
+              <ul class="list-item-5-span">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item5">
+              <ul class="list-item-5-span2">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item5">
+              <ul class="list-item-5-span3">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item5">
+              <ul class="list-item-5-span4">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-list-item">
+            <div class="list-item5">
+              <ul class="list-item-5-span5">
+                <li>List item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button3">
+        <div class="button4">Button</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
             <h3>펀딩 기간</h3>
             <p>2025.02.17 ~ 2025.02.28</p> <br>
           
