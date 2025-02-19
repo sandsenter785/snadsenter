@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앨범 펀딩 프로젝트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .banner {
+            background: url('banner-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .funding-info {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff6f61;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>앨범 펀딩 프로젝트</h1>
+    </header>
+    <div class="banner">지금 함께 만들어가는 음악</div>
+    <div class="container">
+        <div class="content">
+            <h2>펀딩에 참여하고 새로운 음악을 만나보세요!</h2>
+            <p>이번 프로젝트는 여러분의 후원으로 완성됩니다.</p>
+            <a href="#funding" class="cta">지금 후원하기</a>
+        </div>
+        <div class="funding-info" id="funding">
+            <h2>펀딩 진행 상황</h2>
+            <p>목표 금액: 10,000,000원</p>
+            <p>현재 모금액: 3,500,000원</p>
+            <p>마감일: 2025년 5월 30일</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 앨범 펀딩 프로젝트. 모든 권리 보유.</p>
+    </footer>
+</body>
+</html>
