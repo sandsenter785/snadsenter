@@ -18,13 +18,15 @@
             transition: overflow 0.5s ease;
         }
         .video-container {
-            width: 800px;
+            width: 100%;
+            max-width: 600px;
             height: auto;
             position: relative;
             overflow: hidden;
+            margin: 0 auto;
         }
         .video-container iframe {
-            width: 80%;
+            width: 100%;
             height: auto;
             aspect-ratio: 16 / 9; /* 비율 유지 */
             border: none;
@@ -55,107 +57,18 @@
                 transform: translateY(0);
             }
         }
-        .funding-section {
-            width: 90%;
-            max-width: 650px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 0;
-            transform: scale(0.95);
-            animation: fadeInScale 1s ease-out forwards 0.5s;
-        }
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .funding-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-        }
-        .funding {
-            font-size: 14px;
-            line-height: 1.5;
-            font-weight: 500;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.05);
-            text-align: left;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .funding:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .funding h4 {
-            background: rgba(0, 0, 0, 0.1);
-            color: black;
-            padding: 10px;
-            margin: -20px -20px 10px -20px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            text-align: center;
-        }
-        .funding p {
-            margin: 8px 0;
-        }
-        .funding .price {
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .normal {
-            width: 90%;
-            max-width: 1000px;
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: transparent;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards 1s;
-        }
-        .norma2 {
-            width: 90%;
-            max-width: 600px;
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: transparent;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards 1s;
-        }      
     </style>
 </head>
 <body>
 
     <p><p>
     <div class="video-container">
-<!--      <iframe src="https://drive.google.com/file/d/12yjBYr3nrmcSWbSWFBBWFZRO14UJCE61/preview" width="640" height="480" allow="autoplay">  
-      </iframe>  -->
       <iframe src="https://sandsenter785.github.io/snadsenter/dot.gif" allowfullscreen></iframe> 
     </div>
 
-
-  
+    <p><p>
     <div class="container">
-        <h3>"Together Again: 2025, Our Story"</h3>  <br>
+        <h3>"Together Again: 2025, Our Story"</h3> 
         <div class="intro">            
             <p>어느덧 데뷔 29년을 맞이한 지금, 저는 여전히 여러분과 함께 걸어가고 있습니다. 
             많은 시간이 흘렀지만, 그 시간이 저를 여기까지 오게 만든 원동력은 
