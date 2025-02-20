@@ -6,10 +6,11 @@
     <title> LEE JAE WON </title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
         body {
             margin: 0;
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
             background: #fafafa;
             color: #000;
             text-align: center;
@@ -31,7 +32,7 @@
         .video-container iframe {
             width: 80%;
             height: auto;
-            aspect-ratio: 16 / 9; /* 비율 유지 */
+            aspect-ratio: 16 / 9;
             border: none;
         }
         .container {
@@ -49,6 +50,19 @@
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s ease-out forwards;
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 800px;
+            text-align: center;
         }
         @keyframes fadeInUp {
             from {
@@ -120,32 +134,6 @@
             font-size: 16px;
             font-weight: bold;
         }
-        .normal {
-            width: 90%;
-            max-width: 1000px;
-            font-size: 17px;
-            line-height: 1.6;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: transparent;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards 1s;
-        }
-        .norma2 {
-            width: 90%;
-            max-width: 600px;
-            font-size: 17px;
-            line-height: 1.6;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: transparent;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards 1s;
-        }      
         .gallery {
             display: flex;
             flex-direction: column;
@@ -160,9 +148,16 @@
             transition: transform 0.3s ease-in-out;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .gallery .description {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
+
 <!--
     <p><p><p><p>
     <div class="video-container">
@@ -194,15 +189,27 @@
                 여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.</p>
                 <p>함께 해요, "Together Again: 2025, Our Story".</p>
             </div>
-          
+
+  
+ 
+
+    
             <p><p><p><p>
             <h2>펀딩 기간</h2>
             <div class="intro">
               <p>2025.02.17 ~ 2025.02.28</p> <br>
             </div>
-          
-            <h2>프로젝트 예산</h2>
-            <div class="intro">
+
+      <!--  여기서 부터 -->
+          <div class ="gallery">
+            <img class="scroll-image" src="https://github.com/sandsenter785/snadsenter/blob/main/jw1.jpg?raw=true" alt="스크롤 이미지">      <!--  main/ 뒤에 파일명.jpg 를 수정 -->
+          </div>
+        <!--  여기까지 드래그 해서 컨트롤 + X       그리고 넣고싶은 곳에 가서 붙여넣기  -->
+       
+            <p><p>
+        
+            <div class="subtitle">     프로젝트 예산         </div>
+            <div class="content">
                 목표 금액은 아래의 지출 항목으로 사용할 예정입니다.
                 <p>-굿즈제작비</p>
                 <p>-디자인비</p>
@@ -218,8 +225,8 @@
                 <p>-수수료</p> <br>
             </div>
     
-            <h2>프로젝트 일정</h2>
-            <div class="intro">
+            <div class="subtitle">     프로젝트 일정         </div>
+            <div class="content">
                 <p>-2월 18일: 펀딩 시작일</p>
                 <p>-3월: 신곡 제작, 유튜브 촬영, 인증 카드 발송 예정</p>
                 <p>-4월: Event</p>
@@ -228,6 +235,7 @@
                 <p>-9월~10월: 신곡2 공개, 앨범 발매 및 활동 예정, Event</p>
                 <p>-10월: MV 제작</p>
             </div>  
+
 
             <div class="funding-section">
                 <h2>펀딩 패키지</h2>
@@ -262,10 +270,11 @@
                         <span class="price">₩500,000</span>
                     </div>
                 </div>
-            </div>          
-          
+            </div>
+
+        
             <p><p>
-            <div class="intro">
+            <div class="content">
                 <p>*후원은 제품을 구매하는 것이 아니라, 
                     창의적인 프로젝트를 실현할 수 있도록 자금을 지원하는 것입니다.
                     전자상거래법에 따르면, 통신판매는 소비자가 구매를 결정하기 전에 
@@ -287,7 +296,7 @@
         <p><p><p><p>
         <a href = https://docs.google.com/forms/d/e/1FAIpQLSe9NTE_kiwIg8eQ9gxNh0nmNoxFMxfArHWrRNWdfYsty7-tEg/viewform?usp=sharing  target='_blank'> 
          <h3>후원 신청 링크 바로가기</h3>
-        </a>
-  
+        </a>  
+
 </body>
 </html>
