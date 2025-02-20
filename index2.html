@@ -17,6 +17,17 @@
             overflow-y: auto;
             transition: overflow 0.5s ease;
         }
+        .video-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -65,12 +76,11 @@
         }
         .funding-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 20px;
             width: 100%;
         }
         .funding {
-            flex: 1;
             font-size: 14px;
             line-height: 1.5;
             font-weight: 500;
@@ -120,6 +130,10 @@
     </style>
 </head>
 <body>
+    <div class="video-container">
+        <iframe src="https://sandsenter785.github.io/snadsenter/index2.html" allowfullscreen></iframe>
+    </div>
+    
     <div class="container">
         <h1>"Together Again: 2025, Our Story"</h1>  <br><br><br>
         <div class="intro">            
@@ -145,7 +159,6 @@
             여러분의 믿음에 보답하는 앨범을 만들어가겠습니다.</p>
             <p>함께 해요, "Together Again: 2025, Our Story".</p>
         </div>
-
 
         <div class="funding-section">
             <h3>펀딩 패키지</h3>
