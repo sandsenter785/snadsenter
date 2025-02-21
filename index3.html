@@ -20,41 +20,78 @@
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .main {
+            padding-bottom: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+      
         .video-container {
-            width: 100%;
+            background: #fafafa;
+            width: 80%;
             max-width: 800px;
+            height: auto;
             position: relative;
             overflow: hidden;
-            margin: 50px auto;
+            margin: 0 auto;
             border-radius: 10px;
+            justify-content: center;
+            align-items: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
     
         .video-container iframe {
-            width: 100%;
+            width: 80%;
             height: auto;
             aspect-ratio: 16 / 9;
             border: none;
         }
 
-        .link-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .link-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background: #464646;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .link-button:hover {
+            background: #292929;
+        }
+
+        .sub1 {
+            padding: 20px;
+        }
+
+        .sub1 img {
             width: 100%;
-            height: 100%;
-            z-index: 2;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <header>
-        LEE JAE WON
+        LEE JAE WON OFFICIAL PAGE
     </header>
     
-    <div class="video-container">
-        <iframe src="https://sandsenter785.github.io/snadsenter/dot.gif" allowfullscreen scrolling="no"></iframe>
-        <a href="https://sandsenter785.github.io/snadsenter/index2.html" class="link-overlay"></a>
+    <div class="main">
+        <div class="video-container">
+            <iframe src="https://sandsenter785.github.io/snadsenter/dot.gif" allowfullscreen scrolling="no"></iframe>
+        </div>
+        
+        <a href="https://sandsenter785.github.io/snadsenter/index2.html" class="link-button">Go to Official Page</a>
+    </div>
+    
+    <div class="sub1">
+        <img src="your-image-url.jpg" alt="Sub1 Image">
     </div>
 </body>
 </html>
