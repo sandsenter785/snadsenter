@@ -14,14 +14,14 @@
 
         header {
             background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
+            padding: 80px;
             font-size: 1.5em;
             font-weight: bold;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .main {
-            padding-bottom: 20px;
+            padding-bottom: 40px;
             background: rgba(255, 255, 255, 0.9);
         }
       
@@ -32,10 +32,13 @@
             height: auto;
             position: relative;
             overflow: hidden;
+            padding-bottom: 40px;
             margin: 0 auto;
             border-radius: 10px;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;   /*정려 기준*/
+            justify-content: center;  /*세로 정렬*/
+            align-items: center;      /*가로 정렬*/
+            gap: 10px;                /*요소 간 간격*/
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
     
@@ -66,6 +69,7 @@
 
         .sub1 {
             padding: 20px;
+            background: #f8f8f8;
         }
 
         .sub1 img {
@@ -79,18 +83,20 @@
 </head>
 <body>
     <header>
-        LEE JAE WON OFFICIAL PAGE
+        LEE JAE WON
     </header>
     
     <div class="main">
         <div class="video-container">
             <iframe src="https://sandsenter785.github.io/snadsenter/dot.gif" allowfullscreen scrolling="no"></iframe>
         </div>
-        
-        <a href="https://sandsenter785.github.io/snadsenter/index2.html" class="link-button">Go to Official Page</a>
+
+        <p>
+        <a href="https://sandsenter785.github.io/snadsenter/index2.html" class="link-button">펀딩 안내 확인하기</a>
     </div>
     
     <div class="sub1">
+        sub1 영역
         <img src="your-image-url.jpg" alt="Sub1 Image">
     </div>
 </body>
